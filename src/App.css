@@ -1,38 +1,49 @@
 .App {
-  text-align: center;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-drop-down-container {
+  width: 200px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+}
+.app-drop-down-container button {
+  padding: 15px 20px;
+  box-shadow: 0 0 25px -20px #dbdbdb;
+  flex: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.app-drop-down-container ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: calc(100% + 5px);
+  min-width: 100%;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  /* padding: 10px; */
+  border-radius: 4px;
+  box-shadow: 0 0 5px #d4d4d4;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-drop-down-container ul li{
+  background-color: #fcfcfc;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all ease .5s;
+}
+.app-drop-down-container ul li:hover{
+  background-color: #000000;
+  color: #fcfcfc;
 }
